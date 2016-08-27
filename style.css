@@ -245,6 +245,12 @@ li a:active
     background-image: url("i/gplus.png");
 }
 
+#github
+{
+    background-color: #000000;
+    background-image: url("i/github.png");
+}
+
 #lastfm
 {
     background-color: #D51007;
