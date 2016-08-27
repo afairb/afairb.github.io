@@ -3,7 +3,7 @@ window.addEventListener("load", function() {
     for (var i = 0, j = a.length; i < j; i++) {
         a[i].addEventListener("click", function(e) {
             var url = this.href;
-            ga("send", "event", "outbound", "click", url, {"hitCallback": function () {
+            ga("send", "event", "outbound", "click", url, {"hitCallback": function() {
                 document.location = url;
             }});
             e.preventDefault();
