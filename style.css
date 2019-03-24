@@ -1,22 +1,22 @@
 html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6,
 p, a, ol, ul, li,
-article, aside, footer, header, nav, section
+header, main, section, aside, article, footer
 {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
 body
 {
-    line-height: 1;
-    color: #09142D;
-    background: #CCCCCC;
-    cursor: default;
+  line-height: 1;
+  color: #09142d;
+  background: #ccc;
+  cursor: default;
 }
 
 ol, ul
@@ -26,315 +26,266 @@ ol, ul
 
 ::selection
 {
-    color: #CCCCCC;
-    background: #1C3755;
+  color: #ccc;
+  background: #1c3755;
 }
 
 header
 {
-    position: relative;
-    width: 100%;
-    font: 5.5em/1 "Belgrano", serif;
-    text-align: center;
-    text-shadow: 0 2px 2px #6692B1;
-    box-shadow: 0 2px 12px #6692B1;
-    border-width: 1px 0 6px 0;
-    border-style: solid;
-    border-color: #1C3755;
-    background: #4B7094;
-    background: linear-gradient(to bottom, #7D8D9B 0%, #4B7094 75%);
-    margin: 100px 0 50px;
-    padding: 32px 0 37px;
+  position: relative;
+  width: 100%;
+  font: 5.5em/1 "Belgrano", serif;
+  text-align: center;
+  text-shadow: 0 2px 2px #6692b1;
+  box-shadow: 0 2px 12px #6692b1;
+  border-width: 1px 0 6px 0;
+  border-style: solid;
+  border-color: #1c3755;
+  background: #4b7094;
+  background: linear-gradient(to bottom, #7d8d9b 0%, #4b7094 75%);
+  margin: 80px 0 50px;
+  padding: 32px 0 37px;
 }
 
-#animation
+main,
+h1
 {
-    position: absolute;
-    bottom: -6px;
-    left: 50%;
-    margin-left: -500px;
-    height: 6px;
-    width: 1000px;
-    background: radial-gradient(ellipse 100px 50px at 100px, rgba(255, 255, 255, 0.7) 0, transparent 50px);
-    opacity: 0;
-    animation-duration: 1.2s;
-    animation-delay: 1s;
-    animation-timing-function: ease-out;
-}
-
-#animation.animate
-{
-    animation-name: move;
-}
-
-@keyframes move
-{
-    0%
-    {
-        opacity: 0;
-        background-position: 0 0;
-    }
-
-    15%
-        {
-        opacity: 1;
-    }
-
-    85%
-        {
-        opacity: 1;
-    }
-
-    100%
-        {
-        opacity: 0;
-        background-position: 800px 0;
-    }
-}
-
-h1,
-#container
-{
-    width: 800px;
-    margin: 0 auto;
+  width: 800px;
+  margin: 0 auto;
 }
 
 section,
-aside
+footer
 {
-    margin: 0 auto 20px;
+  margin: 0 auto 20px;
 }
 
 section
 {
-    float: left;
-    width: 635px;
-    font-family: "Telex", /*"Voces", "Metrophobic",*/ sans-serif;
+  float: left;
+  width: 635px;
+  font-family: "Telex", /*"Voces", "Metrophobic",*/ sans-serif;
+}
+
+aside
+{
+  padding-left: 15px;
 }
 
 article
 {
-    min-height: 75px;
-    padding-bottom: 15px;
+  min-height: 35px;
+  padding-bottom: 30px;
 }
 
 article:before
 {
-    display: block;
-    float: left;
-    margin: 0 18px 18px 0;
-    border-radius: 35px;
-    width: 70px;
-    height: 70px;
-    background-color: #DDDDDD;
-    background-repeat: no-repeat;
-    border: 1px solid #1C3755;
-    box-shadow: 0 2px 2px #6692B1;
-    content: "";
+  display: block;
+  float: left;
+  border-radius: 35px;
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  background-repeat: no-repeat;
+  border: 1px solid #1c3755;
+  box-shadow: 0 2px 2px #6692b1;
+  content: "";
 }
 
 article:active:before
 {
-    margin: 1px 18px 17px 0;
-    box-shadow: 0 1px 2px #6692B1;
-}
-
-#sky:before
-{
-    background-image: url("i/sky.png");
-    background-position: 6px 18px;
-}
-
-#lbp:before
-{
-    background-image: url("i/lbp.png");
-    background-position: 10px 9px;
-}
-
-#york:before
-{
-    background-image: url("i/york.png");
-    background-position: 14px 13px;
+  margin-top: 1px;
+  box-shadow: 0 1px 2px #6692b1;
 }
 
 h2,
 h3
 {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 h2
 {
-    font-size: 1.5em;
-    top: 19px;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  font-weight: bold;
+  margin: 5px 0 40px;
+}
+
+h2 small
+{
+  font-size: 0.8em;
+  display: block;
+  text-align: right;
+  margin-right: -35px;
 }
 
 h3
 {
-    font-size: 1.15em;
-    top: 24px;
-    left: 8px;
+  font-size: 1.4em;
+  top: 6px;
+  left: 20px;
 }
 
 article a
 {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px dotted #1C3755;
-    padding-bottom: 1px;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted #1c3755;
+  padding-bottom: 1px;
 }
 
 article a:hover,
 article a:active
 {
-    color: #1C3755;
-    padding-bottom: 2px;
+  color: #1c3755;
+  padding-bottom: 2px;
 }
 
-aside
+footer
 {
-    float: right;
-    width: 165px;
-    text-align: right;
-    font-family: "Antic", /*"Didact Gothic",*/ sans-serif;
+  float: right;
+  width: 165px;
+  text-align: right;
+  font-family: "Antic", /*"Didact Gothic",*/ sans-serif;
 }
 
 li
 {
-    height: 30px;
+  height: 30px;
 }
 
 li a
 {
-    display: inline-block;
-    border-radius: 12px;
-    max-width: 0;
-    height: 16px;
-    padding: 4px 0 4px 24px;
-    overflow: hidden;
-    transition: max-width 0.5s linear, padding 0.1s linear;
-    text-decoration: none;
-    color: #FFFFFF;
-    background-repeat: no-repeat;
-    background-position: right 4px top 4px;
+  display: inline-block;
+  border-radius: 12px;
+  max-width: 0;
+  height: 16px;
+  padding: 4px 0 4px 24px;
+  overflow: hidden;
+  transition: max-width 0.5s linear, padding 0.4s linear;
+  text-decoration: none;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 4px top 4px;
+  background-size: 16px;
 }
 
 li a:hover,
 li a:active
 {
-    max-width: 100%;
-    padding: 4px 28px 4px 8px;
-}
-
-#facebook
-{
-    background-color: #4862A3;
-    background-image: url("i/facebook.png");
-}
-
-#twitter
-{
-    background-color: #00ACEE;
-    background-image: url("i/twitter.png");
-}
-
-#gplus
-{
-    background-color: #DD4B39;
-    background-image: url("i/gplus.png");
-}
-
-#github
-{
-    background-color: #000000;
-    background-image: url("i/github.png");
-}
-
-#lastfm
-{
-    background-color: #D51007;
-    background-image: url("i/lastfm.png");
-}
-
-#flickr
-{
-    background-color: #EEEFF0;
-    background-image: url("i/flickr.png");
-    color: #006ADD;
-}
-
-#icm
-{
-    background-color: #222222;
-    background-image: url("i/icm.png");
-}
-
-#linked
-{
-    background-color: #0077B5;
-    background-image: url("i/linked.png");
+  max-width: 100%;
+  padding: 4px 28px 4px 8px;
 }
 
 #mail
 {
-    background-color: #FDFFDD;
-    background-image: url("i/mail.png");
-    color: #333333;
+  background-color: #fdffdd;
+  background-image: url("i/mail.png");
+  color: #333;
+}
+
+#linkedin
+{
+  background-color: #0077b5;
+  background-image: url("i/linkedin.png");
+}
+
+#github
+{
+  background-color: #000;
+  background-image: url("i/github.png");
+}
+
+#facebook
+{
+  background-color: #4862a3;
+  background-image: url("i/facebook.png");
+}
+
+#instagram
+{
+  background-color: #C13584;
+  background-image: url("i/instagram.png");
+}
+
+#twitter
+{
+  background-color: #00acee;
+  background-image: url("i/twitter.png");
+}
+
+#lastfm
+{
+  background-color: #d51007;
+  background-image: url("i/lastfm.png");
+}
+
+#icm
+{
+  background-color: #222;
+  background-image: url("i/icm.png");
 }
 
 @media (max-width: 800px)
 {
 
-    header
-        {
-        margin: 20px 0 25px;
-        font-size: 3em;
-    }
+  header
+  {
+    margin: 20px 0 25px;
+    font-size: 3em;
+  }
 
-    h1,
-    #container,
-    section,
-    aside
-        {
-        width: 100%;
-    }
+  h1,
+  main,
+  section,
+  footer
+  {
+    width: 100%;
+  }
 
-    #animation
-        {
-        display: none;
-    }
+  section,
+  footer
+  {
+    margin-bottom: 25px;
+    width: 90%;
+    float: none;
+    overflow: auto;
+  }
 
-    section,
-    aside
-        {
-        margin-bottom: 25px;
-        width: 90%;
-        float: none;
-    }
+  h2,
+  h3
+  {
+    display: block;
+  }
 
-    h2,
-    h3
-        {
-        display: block;
-    }
+  h2
+  {
+    font-size: 1.8em;
+    margin-top: 14px;
+  }
 
-    h2
-        {
-        font-size: 1.3em;
-        top: 8px;
-    }
+  h2 small
+  {
+    margin-right: 0;
+  }
 
-    h3
-        {
-        font-size: 1.1em;
-        top: 12px;
-    }
+  h3
+  {
+    font-size: 1.1em;
+    top: 8px;
+  }
 
-    li a
-        {
-        max-width: 100%;
-        padding: 4px 28px 4px 8px;
-    }
+  li {
+    display: inline-block;
+    margin-left: 3px;
+  }
+
+  li a
+  {
+    max-width: 100%;
+    padding: 4px 28px 4px 8px;
+  }
 
 }
