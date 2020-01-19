@@ -69,37 +69,46 @@ section
 
 aside
 {
-  padding-left: 15px;
+  margin-left: 15px;
 }
 
 article
 {
   min-height: 35px;
-  padding-bottom: 30px;
+  margin-bottom: 50px;
 }
 
-article:before
+.dot:before
 {
   display: block;
   float: left;
-  border-radius: 35px;
-  width: 30px;
-  height: 30px;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
   background-color: #ddd;
   background-repeat: no-repeat;
   border: 1px solid #1c3755;
   box-shadow: 0 2px 2px #6692b1;
   content: "";
+  margin-right: 10px;
 }
 
-article:active:before
+article.dot:before
+{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+article.dot:active:before
 {
   margin-top: 1px;
   box-shadow: 0 1px 2px #6692b1;
 }
 
 h2,
-h3
+h3,
+h4
 {
   display: inline-block;
   position: relative;
@@ -124,8 +133,12 @@ h2 small
 h3
 {
   font-size: 1.4em;
-  top: 6px;
-  left: 20px;
+  line-height: 35px;
+}
+
+h4
+{
+  font-size: 1.2em;
 }
 
 article a
@@ -143,6 +156,12 @@ article a:active
   padding-bottom: 2px;
 }
 
+article li
+{
+  line-height: 19px;
+  margin: 16px 0;
+}
+
 footer
 {
   float: right;
@@ -151,12 +170,12 @@ footer
   font-family: "Antic", /*"Didact Gothic",*/ sans-serif;
 }
 
-li
+footer li
 {
   height: 30px;
 }
 
-li a
+footer li a
 {
   display: inline-block;
   border-radius: 12px;
@@ -172,8 +191,8 @@ li a
   background-size: 16px;
 }
 
-li a:hover,
-li a:active
+footer li a:hover,
+footer li a:active
 {
   max-width: 100%;
   padding: 4px 28px 4px 8px;
@@ -255,7 +274,8 @@ li a:active
   }
 
   h2,
-  h3
+  h3,
+  h4
   {
     display: block;
   }
@@ -274,15 +294,21 @@ li a:active
   h3
   {
     font-size: 1.1em;
-    top: 8px;
+    margin-left: 52px;
   }
 
-  li {
+  article li span
+  {
+    display: block;
+    margin-left: 27px;
+  }
+
+  footer li {
     display: inline-block;
     margin-left: 3px;
   }
 
-  li a
+  footer li a
   {
     max-width: 100%;
     padding: 4px 28px 4px 8px;
